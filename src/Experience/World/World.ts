@@ -24,7 +24,7 @@ class World {
     player?: Player
     walls?: Walls
 
-    size = new THREE.Vector3(10, 10, 10)
+    size = new THREE.Vector3(20, 10, 20)
 
     constructor() {
         this.experience = new Experience()

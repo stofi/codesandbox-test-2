@@ -27,7 +27,7 @@ class Ball {
             new THREE.SphereBufferGeometry(0.5, 32, 32),
             new THREE.MeshStandardMaterial({
                 color: 'red',
-                roughness: 0.5,
+                roughness: 0.5
             })
         )
         mesh.position.set(0, 3, 0)
@@ -46,7 +46,7 @@ class Ball {
         this.ball = {
             mesh,
             rigidBody,
-            collider,
+            collider
         }
         this.scene.add(mesh)
     }

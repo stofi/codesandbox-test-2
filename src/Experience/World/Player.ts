@@ -85,8 +85,8 @@ class Player {
         // capsule
         const geometry = new THREE.CylinderBufferGeometry(0.5, 0.5, 2, 32)
         const material = new THREE.MeshStandardMaterial({
-            color: 'pink',
-            roughness: 1,
+            color: 'blue',
+            roughness: 1
         })
         const mesh = new THREE.Mesh(geometry, material)
         mesh.position.set(0, 1, 0)
@@ -105,7 +105,7 @@ class Player {
         const group = new THREE.Group()
         group.add(mesh)
         const camera = new THREE.PerspectiveCamera(
-            100,
+            60,
             window.innerWidth / window.innerHeight,
             0.1,
             10
@@ -124,7 +124,7 @@ class Player {
             rigidBody,
             collider,
             group,
-            camera,
+            camera
         }
         // activate camera
     }
@@ -134,7 +134,7 @@ class Player {
         this.renderTarget = new THREE.WebGLRenderTarget(width, width, {
             format: THREE.RGBAFormat,
             minFilter: THREE.LinearFilter,
-            magFilter: THREE.NearestFilter,
+            magFilter: THREE.NearestFilter
         })
         const planeHeight = 0.5
         const planeWidth = 0.5
@@ -168,8 +168,8 @@ class Player {
         const line = new THREE.Line(
             new THREE.BufferGeometry().setFromPoints(points),
             new THREE.LineBasicMaterial({
-                color: 'green',
-                linewidth: 200,
+                color: 'purple',
+                linewidth: 200
             })
         )
         this.line = line

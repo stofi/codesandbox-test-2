@@ -19,7 +19,7 @@ class Ground {
         this.scene = this.experience.scene
         this.physics = physics
         this.size = size
-        this.addWalls()
+        //this.addWalls()
     }
 
     addWalls() {
@@ -27,7 +27,7 @@ class Ground {
             new THREE.BoxBufferGeometry(this.size.x, this.size.y, this.size.z),
             new THREE.MeshStandardMaterial({
                 color: 0xffffff,
-                roughness: 0.5,
+                roughness: 0.5
             })
         )
 
@@ -82,7 +82,7 @@ class Ground {
 
         this.walls = {
             mesh,
-            colliders,
+            colliders
         }
         this.scene.add(mesh)
     }
