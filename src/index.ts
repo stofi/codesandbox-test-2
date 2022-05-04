@@ -1,7 +1,9 @@
-const rootDiv = document.querySelector("#root");
+const rootDiv = document.querySelector<HTMLDivElement>("#root");
 
-rootDiv.innerText = "this is a webpack playground with typescript";
-
+if (rootDiv) {
+  rootDiv.innerText = "this is a webpack playground with typescript and 3js";
+}
+console.log("hi xx");
 // import './entry.css'
 // import './style.css'
 

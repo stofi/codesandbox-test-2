@@ -9,7 +9,7 @@ function resolve(dir) {
 module.exports = {
   context: resolve("./"),
   entry: {
-    home: resolve("./src/index.ts")
+    home: resolve("./src/main.ts")
   },
   output: {
     filename: "static/[name].[contenthash].js",
@@ -53,7 +53,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "webpack playground",
       filename: "index.html",
-      template: "index.html",
+      template: "src/index.html",
       chunks: "all"
     })
   ]
