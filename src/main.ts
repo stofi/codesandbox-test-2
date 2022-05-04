@@ -1,11 +1,13 @@
 import './entry.css'
 import './style.css'
 
-console.log('hi main')
-// import Experience from "./Experience/Experience";
+import Experience from './Experience/Experience.ts'
+;(() => {
+    const canvas = document.querySelector('canvas.webgl') as HTMLCanvasElement
 
-// const canvas = document.querySelector("canvas.webgl") as HTMLCanvasElement;
+    console.log(canvas)
 
-// new Experience(canvas);
+    new Experience(canvas)
 
-console.log('hi xxx')
+    console.log('hi xxx')
+})()

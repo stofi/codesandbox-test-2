@@ -9,9 +9,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-    context: resolve('./'),
+    context: resolve('./src'),
     entry: {
-        home: resolve('./src/main.ts')
+        home: resolve('src/main.ts')
     },
     output: {
         filename: 'static/[name].[contenthash].js',
@@ -51,15 +51,15 @@ module.exports = {
             }
         ]
     },
-    // resolve: {
-    //   src: resolve("./src")
-    // },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'webpack playground',
             filename: 'index.html',
-            template: 'src/index.html',
+            template: 'index.html',
             chunks: 'all'
         }),
         new MiniCssExtractPlugin()
